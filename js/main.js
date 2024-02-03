@@ -292,29 +292,6 @@ function openCity(evt, cityName) {
   }
 
 
-
-
-
-
-
-
-
-
-  document.addEventListener("DOMContentLoaded", function() {
-    var dropdowns = document.querySelectorAll('.dropdown');
-
-    dropdowns.forEach(function(dropdown) {
-        dropdown.addEventListener('click', function() {
-            var menu = this.querySelector('.dropdown-menu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-        });
-    });
-});
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     // Sélectionnez tous les liens du menu
     const menuLinks = document.querySelectorAll('.navbar-nav li a');
