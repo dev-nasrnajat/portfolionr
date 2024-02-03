@@ -310,3 +310,23 @@ function openCity(evt, cityName) {
         });
     });
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionnez tous les liens du menu
+    const menuLinks = document.querySelectorAll('.navbar-nav li a');
+
+    // Sélectionnez le menu
+    const menu = document.querySelector('.navbar-collapse');
+
+    // Ajoutez un gestionnaire d'événement de clic à chaque lien du menu
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Cachez le menu en retirant la classe "show" du menu collapse
+            menu.classList.remove('show');
+        });
+    });
+});
