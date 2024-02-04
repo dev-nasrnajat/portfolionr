@@ -307,3 +307,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionner le bouton de téléchargement
+    const btnTelechargerPDF = document.getElementById('btnTelechargerPDF');
+
+    // Ajouter un gestionnaire d'événement de clic au bouton
+    btnTelechargerPDF.addEventListener('click', function() {
+        // Appeler la fonction pour télécharger le PDF
+        telechargerPDF('pdf/CV_Nasr-NajatFreelance2024.pdf');
+    });
+
+    function telechargerPDF(url) {
+        // Créer un élément <a> pour le lien de téléchargement
+        const lienTelechargement = document.createElement('a');
+
+        // Définir l'URL du PDF comme l'attribut href du lien
+        lienTelechargement.href = url;
+
+        // Définir l'attribut "download" pour forcer le téléchargement plutôt que l'affichage dans le navigateur
+        lienTelechargement.setAttribute('download', '');
+
+        // Cacher le lien de téléchargement
+        lienTelechargement.style.display = 'none';
+
+        // Ajouter le lien de téléchargement à la page
+        document.body.appendChild(lienTelechargement);
+
+        // Cliquez sur le lien de téléchargement pour déclencher le téléchargement du PDF
+        lienTelechargement.click();
+
+        // Supprimer le lien de téléchargement après le téléchargement
+        document.body.removeChild(lienTelechargement);
+    }
+});
