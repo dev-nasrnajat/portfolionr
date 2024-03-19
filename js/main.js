@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ajouter un gestionnaire d'événement de clic au bouton
     btnTelechargerPDF.addEventListener('click', function() {
         // Appeler la fonction pour télécharger le PDF
-        telechargerPDF('pdf/CV_Nasr-NajatFreelance2024.pdf');
+        telechargerPDF('pdf/Cv Nasr_najat.pdf');
     });
 
     function telechargerPDF(url) {
