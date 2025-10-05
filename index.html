@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Développeur Full Stack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-bounce { animation: bounce 2s infinite; }
+        
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        img {
+            transition: transform 0.3s ease;
+        }
+        
+        .project-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .project-details.active {
+            max-height: 1000px;
+        }
+        
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+        
+        .chevron.active {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+    
+    <!-- Hero Section -->
+    <header class="container mx-auto px-6 py-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center text-5xl">
+                👨‍💻
+            </div>
+            <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Développeur Full Stack
+            </h1>
+            <p class="text-xl text-slate-300 mb-6">
+                +5 ans d'expérience | Spécialiste WordPress & Applications Web Modernes
+            </p>
+            <div class="flex gap-4 justify-center mb-8">
+                <a href="tel:+212645727393" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition">
+                    📧 Contact
+                </a>
+            </div>
+            <div class="animate-bounce text-slate-400 text-4xl">
+                ↓
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold mb-12 text-center">Compétences Techniques</h2>
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            
+            <!-- Frontend -->
+            <div class="bg-slate-800/50 backdrop-blur p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition">
+                <div class="text-blue-400 mb-4 text-3xl">💻</div>
+                <h3 class="text-xl font-semibold mb-3">Frontend</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">React</span>
+                    <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Vue.js</span>
+                    <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">TypeScript</span>
+                    <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                    <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Next.js</span>
+                </div>
+            </div>
+
+            <!-- Backend & Database -->
+            <div class="bg-slate-800/50 backdrop-blur p-6 rounded-xl border border-slate-700 hover:border-purple-500 transition">
+                <div class="text-purple-400 mb-4 text-3xl">🗄️</div>
+                <h3 class="text-xl font-semibold mb-3">Backend & Database</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Node.js</span>
+                    <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">PHP</span>
+                    <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Python</span>
+                    <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Express</span>
+                    <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Java Spring Boot</span>
+                    <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                    <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">MySQL</span>
+                    <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                    <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Redis</span>
+                </div>
+            </div>
+
+            <!-- CMS & Tools -->
+            <div class="bg-slate-800/50 backdrop-blur p-6 rounded-xl border border-slate-700 hover:border-green-500 transition">
+                <div class="text-green-400 mb-4 text-3xl">🌐</div>
+                <h3 class="text-xl font-semibold mb-3">CMS & Outils</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">WordPress</span>
+                    <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Elementor</span>
+                    <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">WooCommerce</span>
+                    <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Git</span>
+                    <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Docker</span>
+                    <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">AWS</span>
+                    <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">CI/CD</span>
+                    <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Webpack</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="container mx-auto px-6 py-16 bg-slate-800/30">
+        <h2 class="text-3xl font-bold mb-12 text-center">Projets Réalisés</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            <!-- Project 1: Centre Dentaire Zoubid -->
+            <div class="project-card bg-slate-800/50 backdrop-blur rounded-xl border border-slate-700 hover:border-blue-500 transition overflow-hidden">
+                <div class="h-48 overflow-hidden bg-slate-900">
+                    <img src="https://hookeddigital.net/wp-content/uploads/2025/10/9.png" alt="Centre Dentaire Zoubid" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-2xl font-bold">Centre Dentaire Zoubid</h3>
+                        <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">WordPress</span>
+                    </div>
+                    <p class="text-slate-300 mb-4">Site vitrine professionnel pour centre dentaire à Mohammedia</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">WordPress</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">Elementor</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">PHP</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">MySQL</span>
+                    </div>
+
+                    <button onclick="toggleDetails(1)" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-2 mb-4">
+                        <span class="details-text-1">Voir les détails</span>
+                        <span class="chevron chevron-1">▼</span>
+                    </button>
+
+                    <div id="details-1" class="project-details bg-slate-900/50 p-4 rounded-lg space-y-3">
+                        <div>
+                            <h4 class="font-semibold text-sm mb-2 text-blue-400">Fonctionnalités:</h4>
+                            <ul class="space-y-1">
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Design élégant et professionnel avec Elementor</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Présentation des services dentaires</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Formulaire de prise de rendez-vous en ligne</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Galerie avant/après des traitements</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Section équipe médicale</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Optimisation SEO local pour Mohammedia</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Responsive design pour mobile et tablette</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-slate-700">
+                            <h4 class="font-semibold text-sm mb-1 text-green-400">Résultats:</h4>
+                            <p class="text-sm text-slate-300">Site rapide et optimisé, amélioration de la visibilité locale</p>
+                        </div>
+                        <a href="https://centre-dentaire-zoubid-mohammedia.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm mt-3">
+                            🔗 Voir le site en ligne
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Mawa Electric -->
+            <div class="project-card bg-slate-800/50 backdrop-blur rounded-xl border border-slate-700 hover:border-blue-500 transition overflow-hidden">
+                <div class="h-48 overflow-hidden bg-slate-900">
+                    <img src="https://hookeddigital.net/wp-content/uploads/2025/10/5.png" alt="Mawa Electric" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-2xl font-bold">Mawa Electric</h3>
+                        <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Site Vitrine</span>
+                    </div>
+                    <p class="text-slate-300 mb-4">Site vitrine professionnel pour entreprise électrique</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">WordPress</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">Elementor</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">PHP</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">MySQL</span>
+                    </div>
+
+                    <button onclick="toggleDetails(2)" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-2 mb-4">
+                        <span class="details-text-2">Voir les détails</span>
+                        <span class="chevron chevron-2">▼</span>
+                    </button>
+
+                    <div id="details-2" class="project-details bg-slate-900/50 p-4 rounded-lg space-y-3">
+                        <div>
+                            <h4 class="font-semibold text-sm mb-2 text-blue-400">Fonctionnalités:</h4>
+                            <ul class="space-y-1">
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Design moderne avec Elementor</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Présentation des services et produits électriques</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Galerie de réalisations</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Formulaire de contact et devis</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Optimisation SEO et performances</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Interface responsive</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Section références clients</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-slate-700">
+                            <h4 class="font-semibold text-sm mb-1 text-green-400">Résultats:</h4>
+                            <p class="text-sm text-slate-300">Site vitrine professionnel renforçant la présence digitale</p>
+                        </div>
+                        <a href="https://mawaelectric.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm mt-3">
+                            🔗 Voir le site en ligne
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Rizel -->
+            <div class="project-card bg-slate-800/50 backdrop-blur rounded-xl border border-slate-700 hover:border-blue-500 transition overflow-hidden">
+                <div class="h-48 overflow-hidden bg-slate-900">
+                    <img src="https://hookeddigital.net/wp-content/uploads/2025/10/7.png" alt="Rizel" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-2xl font-bold">Rizel</h3>
+                        <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">E-commerce</span>
+                    </div>
+                    <p class="text-slate-300 mb-4">Boutique en ligne de produits cosmétiques naturels</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">WordPress</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">WooCommerce</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">Elementor</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">MySQL</span>
+                    </div>
+
+                    <button onclick="toggleDetails(3)" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-2 mb-4">
+                        <span class="details-text-3">Voir les détails</span>
+                        <span class="chevron chevron-3">▼</span>
+                    </button>
+
+                    <div id="details-3" class="project-details bg-slate-900/50 p-4 rounded-lg space-y-3">
+                        <div>
+                            <h4 class="font-semibold text-sm mb-2 text-blue-400">Fonctionnalités:</h4>
+                            <ul class="space-y-1">
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Boutique WooCommerce complète</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Catalogue de produits cosmétiques</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Commande directe via WhatsApp intégrée</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Fiches produits détaillées avec images</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Design élégant et féminin</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Panier et gestion commandes</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Intégration WhatsApp Business</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-slate-700">
+                            <h4 class="font-semibold text-sm mb-1 text-green-400">Résultats:</h4>
+                            <p class="text-sm text-slate-300">E-commerce performant avec système de commande WhatsApp</p>
+                        </div>
+                        <a href="https://rizel.ma/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm mt-3">
+                            🔗 Voir le site en ligne
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Domotique Home -->
+            <div class="project-card bg-slate-800/50 backdrop-blur rounded-xl border border-slate-700 hover:border-blue-500 transition overflow-hidden">
+                <div class="h-48 overflow-hidden bg-slate-900">
+                    <img src="https://hookeddigital.net/wp-content/uploads/2025/10/8.png" alt="Domotique Home" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-2xl font-bold">Domotique Home</h3>
+                        <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">E-commerce</span>
+                    </div>
+                    <p class="text-slate-300 mb-4">Boutique en ligne spécialisée en domotique et maison intelligente</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">WordPress</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">WooCommerce</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">Elementor</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">MySQL</span>
+                        <span class="bg-slate-700 px-2 py-1 rounded text-xs text-slate-300">WhatsApp API</span>
+                    </div>
+
+                    <button onclick="toggleDetails(4)" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-2 mb-4">
+                        <span class="details-text-4">Voir les détails</span>
+                        <span class="chevron chevron-4">▼</span>
+                    </button>
+
+                    <div id="details-4" class="project-details bg-slate-900/50 p-4 rounded-lg space-y-3">
+                        <div>
+                            <h4 class="font-semibold text-sm mb-2 text-blue-400">Fonctionnalités:</h4>
+                            <ul class="space-y-1">
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>E-commerce WooCommerce pour produits domotiques</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Commande rapide via WhatsApp intégrée</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Catalogue technique avec fiches détaillées</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Système de filtrage par catégories</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Support client WhatsApp en direct</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Guides d'installation produits</span>
+                                </li>
+                                <li class="text-sm text-slate-300 flex items-start gap-2">
+                                    <span class="text-blue-400 mt-1">•</span>
+                                    <span>Interface utilisateur intuitive</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-3 border-t border-slate-700">
+                            <h4 class="font-semibold text-sm mb-1 text-green-400">Résultats:</h4>
+                            <p class="text-sm text-slate-300">Boutique spécialisée avec commande WhatsApp facilitée</p>
+                        </div>
+                        <a href="https://domotiquehome.ma/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm mt-3">
+                            🔗 Voir le site en ligne
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-12 border-t border-slate-700">
+        <div class="text-center text-slate-400">
+            <p class="mb-4">Disponible pour vos projets web</p>
+            <div class="flex gap-6 justify-center">
+                <a href="tel:+212645727393" class="hover:text-blue-400 transition">
+                    📞 0645 72 73 93
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById('details-' + id);
+            const chevron = document.querySelector('.chevron-' + id);
+            const text = document.querySelector('.details-text-' + id);
+            
+            details.classList.toggle('active');
+            chevron.classList.toggle('active');
+            
+            if (details.classList.contains('active')) {
+                text.textContent = 'Masquer les détails';
+            } else {
+                text.textContent = 'Voir les détails';
+            }
+        }
+    </script>
+</body>
+</html>
